@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://emils.github.io/2048-multiplayer/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>2048 - Multiplayer</title>
+
+  <!-- Lib CSS -->
+  <link href="vex.css" rel="stylesheet" type="text/css">
+  <link href="vex-theme-default.css" rel="stylesheet" type="text/css">
+
+  <!-- Game CSS -->
+  <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<body class="">
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048 - Online</h1><br>
+      <div id="game-stats" style="display:none; float:right">
+        <h5 id="num-players" style="margin: 0">Oyuncuların Sayısı: </h5>
+        <h5 id="num-games" style="margin: 0">Oyun Sayısı: </h5>
+      </div>
+    </div>
+    <p class="game-intro"><a href="http://oyungag.com/2048-online.html">2048 Online</a> oyununa katıl. Sol taraf senin.</p>
+    <div class="scores">
+      <div class="score-container" style="float: left">0</div>
+      <div class="" style="margin-top: 15px; position: absolute; left: 50%">
+        <div style="position: relative; left: -50%">
+          <!-- <p id="player-msg" style="width: 375px; height: 30px" class="text-center"> -->
+          <p id="player-msg" style="width: 230px; height: 30px" class="text-center">
+            <a id="game-start-btn-simple" class="game-start-btn btn">Rakip Bul</a>
+            <!-- <a id="game-start-btn-friend" class="game-start-btn btn">Play a Friend</a> -->
+          </p>
+        </div>
+      </div>
+      <div class="score-container" style="float: right">0</div>
+    </div>
+    <div class="game-boards">
+      
+      <div id="player-local" style="display:inline-block">
+        <div class="game-container">
+          
+          <div class="game-message">
+            <p></p>
+          </div>
+
+          <div class="grid-container">
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+          </div>
+
+          <div class="tile-container">
+
+          </div>
+        </div>
+      </div>
+      <div id="player-online" style="display:inline-block; float:right;">
+        <div class="game-container ">
+          
+          <div class="game-message">
+            <p></p>
+          </div>
+
+          <div class="grid-container">
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+          </div>
+
+          <div class="tile-container">
+				
+          </div>
+        </div>  
+      </div>
+      <p>Çeviren: <a href="http://twitter.com/saimemre">Saim Emre KANAT</a></p>
+    </div>
+    
+  </div>
+  <!-- Libraries JS -->
+  <script src="jquery.min.js"></script>
+  <script src="sockjs-0.3.min.js"></script>
+  <script src="websocket-multiplex-0.1.js"></script>
+  <script src="vex.combined.min.js"></script>
+
+  <!-- Game JS -->
+  <script src="online_input_manager.js"></script>
+  <script src="keyboard_input_manager.js"></script>
+  <script src="html_actuator.js"></script>
+  <script src="grid.js"></script>
+  <script src="tile.js"></script>
+  <script src="game_manager.js"></script>
+  <script src="application.js"></script>
